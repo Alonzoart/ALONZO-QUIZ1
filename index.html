@@ -491,6 +491,7 @@ function submitLead(){
     body: JSON.stringify(payload)
   })
   .then(() => {
+  fbq('track', 'Lead');
     document.getElementById('lead-form').style.display='none';
     document.getElementById('success-box').style.display='block';
   })
